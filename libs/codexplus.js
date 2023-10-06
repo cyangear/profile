@@ -63,9 +63,9 @@
   errors.ArgumentError = class extends errors.ExceptionRoot {
     constructor(id, msg)
     {
-      if (typeof(id) != "number')
+      if (typeof(id) != "number")
         throw new errors.InvalidType(1, "number");
-      if (typeof(msg) != 'string")
+      if (typeof(msg) != "string")
         throw new errors.InvalidType(2, "string");
       if (!Number.isInteger(id))
         throw new errors.InvalidInteger(1);
