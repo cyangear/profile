@@ -155,6 +155,24 @@
       super(id, "Value is outside the necessary range for the specified parameter");
     }
   };
+
+  this.CONSTRUCTOR_ERROR = 2;
+  errors.ConstructorException = class extends errors.FunctionCallError {
+    constructor()
+    {
+      super("Unable to create instance of object. Invalid constructor.", this.CONSTRUCTOR_ERROR);
+    }
+  };
+
+  classes.Object = class {
+    constructor()
+    {
+      if (!instinit)
+        throw new errors.ConstructorException();
+      instmeta.set(this, instinit);
+      return Object.freeze(this);
+    }
+  };
   
   codexplus = Object.freeze(Object.assign(this, {
     string: Object.freeze(libstring),
