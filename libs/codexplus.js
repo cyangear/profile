@@ -94,7 +94,7 @@
   errors.InvalidType = class extends errors.ArgumentError {
     constructor(id, type)
     {
-      if (typeof(id) != "number')
+      if (typeof(id) != "number")
         throw new errors.InvalidType(1, "number");
       if (typeof(type) != "string")
         throw new errors.InvalidType(2, "string");
@@ -107,7 +107,7 @@
   errors.InvalidInteger = class extends errors.ArgumentError {
     constructor(id)
     {
-      if (typeof(id) != "number')
+      if (typeof(id) != "number")
         throw new errors.InvalidType(1, "number");
       if (!Number.isInteger(id))
         throw new errors.InvalidInteger(1);
@@ -117,7 +117,7 @@
   errors.NaN = class extends errors.ArgumentError {
     constructor(id)
     {
-      if (typeof(id) != "number')
+      if (typeof(id) != "number")
         throw new errors.InvalidType(1, "number");
       if (!Number.isInteger(id))
         throw new errors.InvalidInteger(1);
@@ -127,7 +127,7 @@
   errors.InvalidEnum = class extends errors.ArgumentError {
     constructor(id)
     {
-      if (typeof(id) != "number')
+      if (typeof(id) != "number")
         throw new errors.InvalidType(1, "number");
       if (!Number.isInteger(id))
         throw new errors.InvalidInteger(1);
@@ -148,7 +148,7 @@
   errors.OutOfRange = class extends errors.ArgumentError {
     constructor(id)
     {
-      if (typeof(id) != "number')
+      if (typeof(id) != "number")
         throw new errors.InvalidType(1, "number");
       if (!Number.isInteger(id))
         throw new errors.InvalidInteger(1);
